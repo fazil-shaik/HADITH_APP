@@ -1,0 +1,81 @@
+*{
+  background-color:rgba(227, 227, 232, 0.9);
+}
+
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.top-left-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.top-right-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 50px;
+}
+
+.hadith-container {
+  margin-top: 20px;
+}
+
+.hadith-content {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.hadith-reference {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.navigation-button {
+  background-color: #34D399;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .hadith-content {
+    font-size: 1rem;
+  }
+  
+  .hadith-reference {
+    font-size: 0.8rem;
+  }
+  
+  .navigation-button {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+.hadith-reference{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+}
+
