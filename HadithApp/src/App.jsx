@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-
+import love from './assets/love.svg';
+import './App.css';
 function App() {
   const [data, setData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -7,7 +8,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/hadith')
+    fetch('https://hadith-app-1.onrender.com/api/hadith')
       .then((response) => response.json())
       .then((value) => setData(value))
   }, []);
@@ -32,14 +33,14 @@ function App() {
       </div>
       <div className="hadith-container">
         {data.length > 0 && (
-          <>
+          <div>
             <p className='hadith-content'>{data[currentIndex].content}</p>
             <p className='hadith-reference'>{data[currentIndex].reference}</p>
             <div className="navigation-buttons">
               <button onClick={handlePrevious} className='navigation-button'>Previous Hadith</button>
               <button onClick={handleNext} className='navigation-button'>Next Hadith</button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>
