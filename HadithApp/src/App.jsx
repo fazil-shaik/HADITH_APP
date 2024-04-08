@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import love from './assets/love.svg';
+import './weak.css';
 import './App.css';
 function App() {
   const [data, setData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
 
 
 
@@ -11,6 +13,8 @@ function App() {
     fetch('https://hadith-app-1.onrender.com/api/hadith')
       .then((response) => response.json())
       .then((value) => setData(value))
+      setLoading(false);
+
   }, []);
 
   const handleNext = () => {
